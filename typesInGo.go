@@ -37,7 +37,6 @@ func tellMeTypes(p *person) {
 	fmt.Printf("%T %T %T %T %T %T %T %T %T %T", text, p.firstName,
 		p.lastName, p.age, p.weight, p.height, p.remainingCredits,
 		p.accountName, p.accountPassword, p.subscribedUser)
-
 }
 
 func main() {
