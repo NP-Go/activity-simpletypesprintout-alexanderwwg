@@ -16,27 +16,20 @@ type person struct {
 
 //Insert variables declarations here based on activity
 
-func assignTypesForLuke() *person {
-	p := person{firstName: "Luke"}
-	p.lastName = "Skywalker"
-	p.age = 20
-	p.weight = 73.0
-	p.height = 1.72
-	p.remainingCredits = 123.55
-	p.accountName = "admin"
-	p.accountPassword = "password"
-	p.subscribedUser = true
+func assignTypesForLuke() person {
+	p := person{"Luke", "Skywalker", 20, 73.0, 1.72, 123.55, "admin", "password", true}
 
-	return &p
+	return p
 }
 
-func tellMeTypes(p *person) {
+func tellMeTypes(p person) {
 	//insert code here to print out types of variables
 	text := "The following is the account information."
 
 	fmt.Printf("%T %T %T %T %T %T %T %T %T %T", text, p.firstName,
 		p.lastName, p.age, p.weight, p.height, p.remainingCredits,
 		p.accountName, p.accountPassword, p.subscribedUser)
+	fmt.Print(p)
 }
 
 func main() {
